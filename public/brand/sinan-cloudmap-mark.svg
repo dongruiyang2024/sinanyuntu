@@ -1,0 +1,16 @@
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">司南云图品牌标志</title>
+  <desc id="desc">极简 A/AI 信标，内部为贴线 S 数据链，顶部金色目标点。</desc>
+  <defs>
+    <linearGradient id="legGradient" x1="62" y1="64" x2="158" y2="158" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4457E8"/>
+      <stop offset="1" stop-color="#18C5B1"/>
+    </linearGradient>
+  </defs>
+  <path d="M70 154 110 66 150 154" stroke="url(#legGradient)" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 124c15-21 46 21 62 0" stroke="#264E68" stroke-width="15.5" stroke-linecap="round"/>
+  <circle cx="82" cy="124" r="4.8" fill="#4457E8"/>
+  <circle cx="113" cy="124" r="4.8" fill="#18C5B1"/>
+  <circle cx="144" cy="124" r="4.8" fill="#F2A51A"/>
+  <circle cx="110" cy="66" r="13" fill="#F2A51A"/>
+</svg>

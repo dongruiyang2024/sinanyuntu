@@ -1,0 +1,36 @@
+<svg width="390" height="130" viewBox="0 0 390 130" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">司南云图横版 Logo</title>
+  <desc id="desc">司南云图横版组合标志，包含图形标、中文微描边字标与英文底标。</desc>
+  <defs>
+    <linearGradient id="legGradient" x1="62" y1="64" x2="158" y2="158" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4457E8"/>
+      <stop offset="1" stop-color="#18C5B1"/>
+    </linearGradient>
+    <style>
+      .cn-word {
+        font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, sans-serif;
+        font-size: 23px;
+        font-weight: 560;
+        letter-spacing: 0.04em;
+      }
+      .en-word {
+        font-family: Inter, Avenir Next, Helvetica Neue, Arial, sans-serif;
+        font-size: 9.6px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </defs>
+  <svg x="20" y="24" width="82" height="82" viewBox="0 0 220 220" aria-hidden="true">
+    <path d="M70 154 110 66 150 154" stroke="url(#legGradient)" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M82 124c15-21 46 21 62 0" stroke="#264E68" stroke-width="15.5" stroke-linecap="round"/>
+    <circle cx="82" cy="124" r="4.8" fill="#4457E8"/>
+    <circle cx="113" cy="124" r="4.8" fill="#18C5B1"/>
+    <circle cx="144" cy="124" r="4.8" fill="#F2A51A"/>
+    <circle cx="110" cy="66" r="13" fill="#F2A51A"/>
+  </svg>
+  <text x="98" y="65" class="cn-word" fill="#101928">司南云图</text>
+  <g transform="translate(98 84) scale(0.92 1)">
+    <text class="en-word" fill="#8A95A3">SINAN CLOUDMAP</text>
+  </g>
+</svg>
