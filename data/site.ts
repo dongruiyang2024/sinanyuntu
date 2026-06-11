@@ -98,7 +98,7 @@ export const solutionLinks = [
   { label: "跨境内容方案", href: "https://www.shopify.com/" },
 ];
 
-export const footerTagline = "外贸 AI 增长系统，让市场、商品与客户运营持续成图。";
+export const footerTagline = "外贸 AI 增长系统，连接市场、商品与客户。";
 
 export const socialChannels = [
   { label: "企业公众号" },
