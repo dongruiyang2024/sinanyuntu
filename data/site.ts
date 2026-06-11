@@ -101,9 +101,9 @@ export const solutionLinks = [
 export const footerTagline = "外贸 AI 增长系统，让市场、商品与客户运营持续成图。";
 
 export const socialChannels = [
-  { label: "企业公众号", placeholder: "公众号二维码占位" },
-  { label: "企业微信", placeholder: "企微二维码占位" },
-  { label: "飞书", placeholder: "飞书二维码占位" },
+  { label: "企业公众号" },
+  { label: "企业微信" },
+  { label: "飞书" },
 ];
 
 export const complianceRecords = [

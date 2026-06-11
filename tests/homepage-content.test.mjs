@@ -134,12 +134,16 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
 
   assert.match(site, /footerTagline/);
   assert.match(site, /外贸 AI 增长系统/);
-  assert.match(footer, /w-\[260px\]/);
+  assert.match(footer, /w-\[320px\]/);
+  assert.match(footer, /py-7/);
+  assert.match(footer, /sm:flex-row/);
   assert.match(footer, /footerTagline/);
   assert.doesNotMatch(
     footer,
     /把机会识别、商品表达、客户触达与增长复盘连接成可执行的业务云图/,
   );
+  assert.doesNotMatch(site, /\bQR\b/);
+  assert.doesNotMatch(footer, /\bQR\b/);
 
   for (const channel of ["企业公众号", "企业微信", "飞书"]) {
     assert.match(site, new RegExp(channel));
@@ -149,8 +153,11 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
   assert.match(site, /complianceRecords/);
   assert.match(footer, /socialChannels\.map/);
   assert.match(footer, /complianceRecords\.map/);
+  assert.match(footer, /h-16 w-16/);
   assert.match(footer, /二维码占位/);
   assert.match(footer, /备案信息/);
+  assert.match(footer, /justify-center/);
+  assert.match(footer, /flex-wrap/);
   assert.match(site, /浙ICP备00000000号-1/);
   assert.match(site, /浙公网安备 33010000000000号/);
 });

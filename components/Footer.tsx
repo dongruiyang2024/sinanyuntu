@@ -12,24 +12,26 @@ import {
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-[#f8fbff]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-6 lg:grid-cols-[1.15fr_1.25fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-7 sm:px-6 lg:grid-cols-[1.25fr_1fr] lg:px-8">
         <div className="min-w-0">
-          <Image
-            src="/brand/sinan-cloudmap-logo-horizontal.svg"
-            alt="司南云图"
-            width={260}
-            height={87}
-            className="h-auto w-[260px]"
-          />
-          <p className="mt-5 max-w-md text-sm leading-7 text-slate-600">{footerTagline}</p>
-          <div className="mt-8 grid max-w-xl gap-4 sm:grid-cols-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Image
+              src="/brand/sinan-cloudmap-logo-horizontal.svg"
+              alt="司南云图"
+              width={320}
+              height={107}
+              className="h-auto w-[320px]"
+            />
+            <p className="max-w-sm text-sm leading-7 text-slate-600">{footerTagline}</p>
+          </div>
+          <div className="mt-4 grid max-w-sm grid-cols-3 gap-4">
             {socialChannels.map((channel) => (
               <div key={channel.label} className="min-w-0">
                 <div
                   aria-label={`${channel.label} 二维码占位`}
-                  className="flex h-24 w-24 items-center justify-center rounded-lg border border-slate-200 bg-white shadow-sm"
+                  className="flex h-16 w-16 items-center justify-center rounded-lg border border-slate-200 bg-white shadow-sm"
                 >
-                  <div className="grid h-16 w-16 grid-cols-4 gap-1">
+                  <div className="grid h-11 w-11 grid-cols-4 gap-0.5">
                     {Array.from({ length: 16 }).map((_, index) => (
                       <span
                         key={`${channel.label}-${index}`}
@@ -42,13 +44,12 @@ export function Footer() {
                     ))}
                   </div>
                 </div>
-                <p className="mt-3 text-sm font-semibold text-brand-ink">{channel.label}</p>
-                <p className="mt-1 text-xs text-slate-500">{channel.placeholder}</p>
+                <p className="mt-1 text-xs font-semibold text-brand-ink">{channel.label}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="grid gap-7 sm:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-3">
           <div>
             <h3 className="text-sm font-semibold text-brand-ink">站点导航</h3>
             <div className="mt-3 grid gap-2 text-sm text-slate-600">
@@ -87,13 +88,11 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-slate-200/80">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs leading-6 text-slate-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>备案信息</p>
-          <div className="flex flex-col gap-1 lg:flex-row lg:gap-6">
-            {complianceRecords.map((record) => (
-              <span key={record}>{record}</span>
-            ))}
-          </div>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-5 py-2 text-center text-xs leading-6 text-slate-500 sm:px-6 lg:px-8">
+          <span>备案信息</span>
+          {complianceRecords.map((record) => (
+            <span key={record}>{record}</span>
+          ))}
         </div>
       </div>
     </footer>
