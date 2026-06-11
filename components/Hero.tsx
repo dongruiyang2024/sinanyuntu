@@ -14,7 +14,7 @@ export function Hero() {
             AI Growth Products for Trade Teams
           </p>
           <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-brand-ink sm:text-5xl lg:text-6xl">
-            让贸易增长有迹可循
+            AI 时代的贸易增长专家
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
             司南云图围绕外贸、内贸、独立站与 GEO 场景构建 AI 增长产品矩阵，把客户信号、销售执行和内容可见度连接成可落地的增长系统。
