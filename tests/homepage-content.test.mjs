@@ -134,13 +134,14 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
 
   assert.match(site, /footerTagline/);
   assert.match(site, /外贸 AI 增长系统/);
-  assert.match(footer, /h-\[86px\] w-\[205px\] shrink-0 overflow-hidden/);
-  assert.match(footer, /h-\[96px\] w-\[288px\] max-w-none/);
+  assert.match(footer, /h-\[72px\] w-\[202px\] shrink-0 overflow-hidden/);
+  assert.match(footer, /-translate-x-\[15px\] -translate-y-\[18px\]/);
+  assert.match(footer, /sm:-translate-x-\[17px\] sm:-translate-y-\[21px\]/);
   assert.match(footer, /py-7/);
   assert.match(footer, /lg:grid-cols-\[minmax\(0,1fr\)_500px\]/);
   assert.match(footer, /sm:grid-cols-\[0\.75fr_0\.95fr_1\.35fr\]/);
-  assert.match(footer, /gap-2 sm:flex-row/);
-  assert.match(footer, /max-w-\[520px\]/);
+  assert.doesNotMatch(footer, /sm:flex-row/);
+  assert.match(footer, /mt-2 max-w-\[360px\]/);
   assert.match(footer, /footerTagline/);
   assert.doesNotMatch(
     footer,
@@ -149,7 +150,8 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
   assert.doesNotMatch(site, /\bQR\b/);
   assert.doesNotMatch(footer, /\bQR\b/);
 
-  for (const channel of ["企业公众号", "企业微信", "飞书"]) {
+  assert.doesNotMatch(site, /企业公众号/);
+  for (const channel of ["公众号", "企业微信", "飞书"]) {
     assert.match(site, new RegExp(channel));
   }
 
@@ -161,18 +163,20 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
   assert.match(footer, /socialChannels\.map/);
   assert.match(footer, /complianceRecords\.map/);
   assert.match(footer, /legalLinks\.map/);
-  assert.match(footer, /mt-2 flex flex-wrap/);
+  assert.match(footer, /mailto:\$\{contact.email\}/);
+  assert.match(footer, /mt-3 grid max-w-\[156px\] grid-cols-3 gap-2/);
   assert.match(footer, /grid justify-items-center gap-1/);
-  assert.match(footer, /h-12 w-12/);
-  assert.match(footer, /text-\[11px\]/);
+  assert.match(footer, /h-10 w-10/);
+  assert.match(footer, /text-\[10px\]/);
   assert.match(footer, /二维码占位/);
   assert.doesNotMatch(footer, />备案信息</);
   assert.match(footer, /justify-between/);
   assert.match(footer, /md:flex-row/);
   assert.match(footer, /flex-wrap/);
-  for (const link of ["隐私政策", "服务条款", "安全与合规", "系统状态"]) {
+  for (const link of ["隐私政策", "服务条款", "安全与合规"]) {
     assert.match(site, new RegExp(link));
   }
+  assert.doesNotMatch(site, /系统状态/);
   assert.match(site, /浙ICP备00000000号-1/);
   assert.match(site, /浙公网安备 33010000000000号/);
 });

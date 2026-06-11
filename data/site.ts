@@ -101,7 +101,7 @@ export const solutionLinks = [
 export const footerTagline = "外贸 AI 增长系统，连接市场、商品与客户。";
 
 export const socialChannels = [
-  { label: "企业公众号" },
+  { label: "公众号" },
   { label: "企业微信" },
   { label: "飞书" },
 ];
@@ -118,7 +118,6 @@ export const legalLinks = [
   { label: "隐私政策", href: "#" },
   { label: "服务条款", href: "#" },
   { label: "安全与合规", href: "#" },
-  { label: "系统状态", href: "#" },
 ];
 
 export const recruitingRoles = [
