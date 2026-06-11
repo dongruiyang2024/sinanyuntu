@@ -10,7 +10,7 @@ export function ContactSection() {
             接入你的第一张增长云图
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-            从目标市场、主营品类和现有运营链路开始，评估机会雷达、内容引擎、触达协同与复盘中枢的接入方式。
+            从客户类型、销售链路和增长目标开始，评估 SinanPilot、内贸客户增长、独立站和 GEO 服务的接入方式。
           </p>
         </div>
         <div className="min-w-0 rounded-lg border border-white/15 bg-white/10 p-6">

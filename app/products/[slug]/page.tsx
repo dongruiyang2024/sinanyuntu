@@ -84,6 +84,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
           >
             预约产品沟通
           </a>
+          {product.officialUrl ? (
+            <a
+              href={product.officialUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="ml-0 mt-4 inline-flex h-12 items-center justify-center rounded-full border border-brand-blue/30 bg-white px-6 text-sm font-semibold text-brand-blue transition hover:border-brand-blue hover:bg-brand-blue hover:text-white sm:ml-3"
+            >
+              访问产品官网
+            </a>
+          ) : null}
         </div>
       </section>
       <Footer />

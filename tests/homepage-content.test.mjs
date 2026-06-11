@@ -30,10 +30,10 @@ test("site source includes the approved pages and navigation model", async () =>
   }
 
   for (const route of [
-    "/products/opportunity-radar",
-    "/products/content-engine",
-    "/products/customer-touch",
-    "/products/growth-loop",
+    "/products/sinanpilot",
+    "/products/domestic-trade-growth",
+    "/products/independent-site-growth",
+    "/products/geo-growth-service",
     "/cases",
     "/about",
   ]) {
@@ -68,6 +68,41 @@ test("header uses wider nav spacing and a custom product chevron", async () => {
   assert.match(header, /<svg/);
   assert.match(header, /M6 9l6 6 6-6/);
   assert.doesNotMatch(header, /⌄/);
+});
+
+test("product services use the approved SinanPilot product lineup", async () => {
+  const site = await readProjectFile("data/site.ts");
+  const hero = await readProjectFile("components/Hero.tsx");
+  const capabilityMap = await readProjectFile("components/CapabilityMap.tsx");
+  const productsPage = await readProjectFile("app/products/page.tsx");
+  const productDetail = await readProjectFile("app/products/[slug]/page.tsx");
+
+  for (const product of [
+    "SinanPilot",
+    "内贸客户增长软件",
+    "独立站增长软件",
+    "GEO 增长服务",
+  ]) {
+    assert.match(site, new RegExp(product));
+  }
+
+  for (const oldProduct of ["机会雷达", "商品内容引擎", "客户触达协同", "增长复盘中枢"]) {
+    assert.doesNotMatch(site, new RegExp(oldProduct));
+  }
+
+  assert.match(site, /trade\.xiezi\.tech/);
+  assert.match(site, /买家信号、智能判断到销售执行/);
+  assert.match(site, /买家信号到销售执行的 AI 增长工作台/);
+  assert.match(site, /国内贸易团队/);
+  assert.match(site, /独立站经营场景/);
+  assert.match(site, /生成式搜索/);
+  assert.match(hero, /SinanPilot 外贸 AI 增长工作台/);
+  assert.match(hero, /\/products\/sinanpilot/);
+  assert.match(capabilityMap, /SinanPilot/);
+  assert.match(capabilityMap, /买家信号、智能判断到销售执行/);
+  assert.match(productsPage, /外贸、内贸、独立站和 GEO/);
+  assert.match(productDetail, /officialUrl/);
+  assert.match(productDetail, /访问产品官网/);
 });
 
 test("product, case, and about routes exist", async () => {

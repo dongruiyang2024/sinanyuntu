@@ -14,7 +14,7 @@ export default function ProductsPage() {
             产品服务
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-9 text-slate-600">
-            四个产品模块构成外贸增长云图，从机会识别到复盘迭代，覆盖团队日常增长链路。
+            围绕外贸、内贸、独立站和 GEO 场景，司南云图提供面向客户增长的产品与软件服务。
           </p>
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {products.map((product) => (

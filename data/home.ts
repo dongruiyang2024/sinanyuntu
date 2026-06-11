@@ -7,58 +7,58 @@ export const navItems = [
 ];
 
 export const trustKeywords = [
-  "机会雷达",
-  "商品内容引擎",
-  "客户触达协同",
-  "增长复盘中枢",
+  "SinanPilot",
+  "内贸客户增长软件",
+  "独立站增长软件",
+  "GEO 增长服务",
 ];
 
 export const capabilities = [
   {
-    title: "机会雷达",
-    description: "扫描目标市场、关键词变化与机会品类，形成可追踪的市场进入线索。",
+    title: "买家信号捕捉",
+    description: "汇总买家意图、采购线索和市场变化，帮助外贸团队更早发现值得跟进的客户信号。",
     marker: "Signal",
   },
   {
-    title: "商品内容引擎",
-    description: "将卖点、关键词和场景表达结构化，持续生成更贴近买家搜索与决策的商品内容。",
-    marker: "Content",
+    title: "商机智能判断",
+    description: "用 AI 辅助识别客户优先级、需求匹配度和跟进价值，让销售判断更稳定。",
+    marker: "Judge",
   },
   {
-    title: "客户触达协同",
-    description: "围绕询盘、线索与跟进节奏编排动作，减少运营断点，提升响应效率。",
+    title: "销售执行协同",
+    description: "围绕客户触达、沟通内容和下一步动作形成执行节奏，减少线索在团队间流失。",
     marker: "Action",
   },
   {
-    title: "增长复盘中枢",
-    description: "把曝光、内容、沟通与转化反馈沉淀为数据资产，驱动下一轮增长决策。",
+    title: "增长复盘优化",
+    description: "沉淀线索、触达和转化反馈，持续校准买家判断、销售动作和客户增长策略。",
     marker: "Loop",
   },
 ];
 
 export const scenarios = [
   {
-    title: "市场进入评估",
-    description: "将市场需求、竞争态势和机会品类汇总成可比较的进入判断。",
+    title: "外贸客户开发",
+    description: "用 SinanPilot 连接买家信号、商机判断和销售执行，提升外贸客户增长效率。",
   },
   {
-    title: "商品表达升级",
-    description: "围绕搜索词、卖点层级和采购语境，构建可复用的内容资产。",
+    title: "内贸客户增长",
+    description: "围绕国内客户线索、跟进节奏和成交反馈，形成稳定的客户增长管理流程。",
   },
   {
-    title: "线索运营协同",
-    description: "把询盘、跟进和触达节奏纳入同一张运营视图，减少跨环节损耗。",
+    title: "独立站线索转化",
+    description: "连接访客行为、内容承接和询盘线索，优化独立站从流量到转化的路径。",
   },
   {
-    title: "增长策略复盘",
-    description: "用内容、流量、线索和转化反馈反推下一轮市场与商品动作。",
+    title: "GEO 可见度优化",
+    description: "围绕生成式搜索和 AI 答案场景，优化品牌知识、内容结构和引用路径。",
   },
 ];
 
 export const deliverySteps = [
   {
     title: "产品底座",
-    description: "以机会雷达、内容引擎、触达协同和复盘中枢承载核心外贸增长流程。",
+    description: "以 SinanPilot 承载外贸客户增长流程，并延展到内贸、独立站和 GEO 场景。",
   },
   {
     title: "业务配置",

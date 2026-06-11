@@ -8,9 +8,9 @@ export function CapabilityMap() {
     <section id="capabilities" className="bg-white px-5 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="AI Capability Map"
-          title="四个产品模块，组成外贸增长云图"
-          description="从机会识别、商品表达、客户触达到增长复盘，司南云图把外贸运营拆成可配置、可追踪、可迭代的产品能力。"
+          eyebrow="SinanPilot Capability Map"
+          title="围绕 SinanPilot 的四项核心增长能力"
+          description="从买家信号、智能判断到销售执行，司南云图把外贸客户增长拆成可配置、可追踪、可复盘的产品能力。"
         />
         <div className="mt-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <CloudMapVisual compact />
