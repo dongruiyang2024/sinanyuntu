@@ -98,6 +98,19 @@ export const solutionLinks = [
   { label: "跨境内容方案", href: "https://www.shopify.com/" },
 ];
 
+export const footerTagline = "外贸 AI 增长系统，让市场、商品与客户运营持续成图。";
+
+export const socialChannels = [
+  { label: "企业公众号", placeholder: "公众号二维码占位" },
+  { label: "企业微信", placeholder: "企微二维码占位" },
+  { label: "飞书", placeholder: "飞书二维码占位" },
+];
+
+export const complianceRecords = [
+  "浙ICP备00000000号-1",
+  "浙公网安备 33010000000000号",
+];
+
 export const recruitingRoles = [
   {
     title: "AI 运营",

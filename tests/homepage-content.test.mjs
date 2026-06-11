@@ -128,6 +128,33 @@ test("footer exposes configurable external solution links", async () => {
   assert.match(footer, /rel="noreferrer"/);
 });
 
+test("footer includes stronger brand, QR placeholders, and compliance records", async () => {
+  const site = await readProjectFile("data/site.ts");
+  const footer = await readProjectFile("components/Footer.tsx");
+
+  assert.match(site, /footerTagline/);
+  assert.match(site, /外贸 AI 增长系统/);
+  assert.match(footer, /w-\[260px\]/);
+  assert.match(footer, /footerTagline/);
+  assert.doesNotMatch(
+    footer,
+    /把机会识别、商品表达、客户触达与增长复盘连接成可执行的业务云图/,
+  );
+
+  for (const channel of ["企业公众号", "企业微信", "飞书"]) {
+    assert.match(site, new RegExp(channel));
+  }
+
+  assert.match(site, /socialChannels/);
+  assert.match(site, /complianceRecords/);
+  assert.match(footer, /socialChannels\.map/);
+  assert.match(footer, /complianceRecords\.map/);
+  assert.match(footer, /二维码占位/);
+  assert.match(footer, /备案信息/);
+  assert.match(site, /浙ICP备00000000号-1/);
+  assert.match(site, /浙公网安备 33010000000000号/);
+});
+
 test("brand assets are available to the Next.js public directory", async () => {
   for (const asset of [
     "public/brand/sinan-cloudmap-logo-horizontal.svg",
