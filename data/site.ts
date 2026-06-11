@@ -111,6 +111,16 @@ export const complianceRecords = [
   "浙公网安备 33010000000000号",
 ];
 
+export const copyrightText =
+  "Copyright © 2026 司南云图. 保留所有权利。";
+
+export const legalLinks = [
+  { label: "隐私政策", href: "#" },
+  { label: "服务条款", href: "#" },
+  { label: "安全与合规", href: "#" },
+  { label: "系统状态", href: "#" },
+];
+
 export const recruitingRoles = [
   {
     title: "AI 运营",

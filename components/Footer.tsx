@@ -3,7 +3,9 @@ import Link from "next/link";
 import {
   complianceRecords,
   contact,
+  copyrightText,
   footerTagline,
+  legalLinks,
   navItems,
   socialChannels,
   solutionLinks,
@@ -88,11 +90,20 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-slate-200/80">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-5 py-2 text-center text-xs leading-6 text-slate-500 sm:px-6 lg:px-8">
-          <span>备案信息</span>
-          {complianceRecords.map((record) => (
-            <span key={record}>{record}</span>
-          ))}
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-4 text-sm leading-6 text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 md:justify-start">
+            <span>{copyrightText}</span>
+            {complianceRecords.map((record) => (
+              <span key={record}>{record}</span>
+            ))}
+          </div>
+          <nav aria-label="底部法律链接" className="flex flex-wrap justify-center gap-x-6 gap-y-1 md:justify-end">
+            {legalLinks.map((link) => (
+              <a key={link.label} href={link.href} className="transition hover:text-brand-blue">
+                {link.label}
+              </a>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>

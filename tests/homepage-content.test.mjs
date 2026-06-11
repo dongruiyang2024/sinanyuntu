@@ -151,13 +151,20 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
 
   assert.match(site, /socialChannels/);
   assert.match(site, /complianceRecords/);
+  assert.match(site, /legalLinks/);
+  assert.match(site, /Copyright © 2026/);
   assert.match(footer, /socialChannels\.map/);
   assert.match(footer, /complianceRecords\.map/);
+  assert.match(footer, /legalLinks\.map/);
   assert.match(footer, /h-16 w-16/);
   assert.match(footer, /二维码占位/);
-  assert.match(footer, /备案信息/);
-  assert.match(footer, /justify-center/);
+  assert.doesNotMatch(footer, />备案信息</);
+  assert.match(footer, /justify-between/);
+  assert.match(footer, /md:flex-row/);
   assert.match(footer, /flex-wrap/);
+  for (const link of ["隐私政策", "服务条款", "安全与合规", "系统状态"]) {
+    assert.match(site, new RegExp(link));
+  }
   assert.match(site, /浙ICP备00000000号-1/);
   assert.match(site, /浙公网安备 33010000000000号/);
 });
