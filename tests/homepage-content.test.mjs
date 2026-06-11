@@ -32,8 +32,17 @@ test("homepage source includes the approved sections and anchors", async () => {
   }
 
   assert.match(data, /contact@sinancloudmap\.com/);
-  assert.match(data, /AI 工具软件/);
-  assert.match(data, /产品与服务落地/);
+  assert.match(data, /机会雷达/);
+  assert.match(data, /商品内容引擎/);
+  assert.match(data, /增长复盘中枢/);
+});
+
+test("header presents the logo as a first-viewport brand signal", async () => {
+  const header = await readProjectFile("components/Header.tsx");
+
+  assert.match(header, /h-\[82px\]/);
+  assert.match(header, /sm:h-24/);
+  assert.match(header, /className="h-12 w-auto sm:h-16"/);
 });
 
 test("brand assets are available to the Next.js public directory", async () => {

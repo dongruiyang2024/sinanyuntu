@@ -11,10 +11,10 @@ export function Footer() {
             alt="司南云图"
             width={180}
             height={60}
-            className="h-11 w-auto"
+            className="h-14 w-auto"
           />
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600">
-            司南云图（杭州）科技有限公司专注外贸 AI 产品与服务，帮助外贸团队把业务链路转化为可执行的增长云图。
+            司南云图（杭州）科技有限公司构建外贸 AI 增长系统，把机会识别、商品表达、客户触达与增长复盘连接成可执行的业务云图。
           </p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2">

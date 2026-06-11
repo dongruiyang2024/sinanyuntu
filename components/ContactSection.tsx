@@ -7,11 +7,10 @@ export function ContactSection() {
         <div className="min-w-0">
           <p className="text-sm font-semibold uppercase text-brand-cyan">Contact</p>
           <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">
-            让我们一起梳理你的外贸增长云图
+            接入你的第一张增长云图
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-            如果你正在探索 AI
-            如何进入外贸运营，司南云图可以从业务链路、工具能力和落地节奏开始一起拆解。
+            从目标市场、主营品类和现有运营链路开始，评估机会雷达、内容引擎、触达协同与复盘中枢的接入方式。
           </p>
         </div>
         <div className="min-w-0 rounded-lg border border-white/15 bg-white/10 p-6">

@@ -8,8 +8,8 @@ export function CapabilityMap() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="AI Capability Map"
-          title="围绕外贸增长的 AI 能力图谱"
-          description="从市场信号到复盘反馈，司南云图把关键运营环节连接成清晰的数据链。"
+          title="四个产品模块，组成外贸增长云图"
+          description="从机会识别、商品表达、客户触达到增长复盘，司南云图把外贸运营拆成可配置、可追踪、可迭代的产品能力。"
         />
         <div className="mt-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <CloudMapVisual compact />

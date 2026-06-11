@@ -67,9 +67,9 @@ export function CloudMapVisual({ compact = false }: CloudMapVisualProps) {
         </div>
       ))}
       <div className="absolute bottom-6 left-6 right-6 rounded-lg border border-white/70 bg-white/80 p-4 shadow-sm backdrop-blur">
-        <p className="text-sm font-semibold text-brand-ink">Signal · Data · Action</p>
+        <p className="text-sm font-semibold text-brand-ink">Signal · Content · Action · Loop</p>
         <p className="mt-1 text-sm leading-6 text-slate-600">
-          把市场信号、商品信息、运营动作和复盘数据连接成可导航路径。
+          从机会识别到增长复盘，把外贸运营沉淀为连续进化的数据链路。
         </p>
       </div>
     </div>

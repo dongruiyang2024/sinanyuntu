@@ -7,8 +7,8 @@ export function ServiceScenarios() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Trade Scenarios"
-          title="把 AI 能力放进真实外贸场景"
-          description="官网首版用业务语言说明价值，让客户先理解司南云图能帮他们解决什么问题。"
+          title="面向外贸团队的高频增长场景"
+          description="围绕市场进入、商品表达、线索运营和增长复盘，沉淀可复用的 AI 工作流与数据资产。"
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {scenarios.map((item, index) => (

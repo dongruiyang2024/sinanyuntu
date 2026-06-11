@@ -7,8 +7,8 @@ export function DeliveryModel() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Product + Service"
-          title="产品能力与服务落地一起交付"
-          description="司南云图不是单纯咨询，也不是只交付工具，而是让 AI 能力进入客户的日常外贸运营。"
+          title="产品底座 + 业务配置 + 增长迭代"
+          description="不是一次性交付工具，也不是停留在咨询建议；司南云图把 AI 产品能力嵌入外贸团队的增长链路。"
         />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {deliverySteps.map((step, index) => (

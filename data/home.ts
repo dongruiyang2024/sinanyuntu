@@ -7,70 +7,70 @@ export const navItems = [
 ];
 
 export const trustKeywords = [
-  "AI 工具软件",
-  "外贸业务链路",
-  "数据化运营",
-  "产品与服务落地",
+  "机会雷达",
+  "商品内容引擎",
+  "客户触达协同",
+  "增长复盘中枢",
 ];
 
 export const capabilities = [
   {
-    title: "市场洞察",
-    description: "发现目标市场、机会品类和需求信号，让选品与进入策略更有依据。",
+    title: "机会雷达",
+    description: "扫描目标市场、关键词变化与机会品类，形成可追踪的市场进入线索。",
     marker: "Signal",
   },
   {
-    title: "商品运营",
-    description: "辅助商品信息优化、内容生成和卖点表达，提升外贸展示效率。",
+    title: "商品内容引擎",
+    description: "将卖点、关键词和场景表达结构化，持续生成更贴近买家搜索与决策的商品内容。",
     marker: "Content",
   },
   {
-    title: "客户触达",
-    description: "支持询盘、沟通和转化线索管理，让运营动作更连贯。",
+    title: "客户触达协同",
+    description: "围绕询盘、线索与跟进节奏编排动作，减少运营断点，提升响应效率。",
     marker: "Action",
   },
   {
-    title: "数据复盘",
-    description: "沉淀运营反馈与增长数据，指导下一轮市场和商品动作。",
+    title: "增长复盘中枢",
+    description: "把曝光、内容、沟通与转化反馈沉淀为数据资产，驱动下一轮增长决策。",
     marker: "Loop",
   },
 ];
 
 export const scenarios = [
   {
-    title: "新市场探索",
-    description: "从目标市场、机会品类和需求信号出发，缩短判断周期。",
+    title: "市场进入评估",
+    description: "将市场需求、竞争态势和机会品类汇总成可比较的进入判断。",
   },
   {
-    title: "商品内容优化",
-    description: "围绕关键词、卖点和表达结构，提升商品信息质量。",
+    title: "商品表达升级",
+    description: "围绕搜索词、卖点层级和采购语境，构建可复用的内容资产。",
   },
   {
-    title: "外贸运营提效",
-    description: "把重复运营动作交给 AI 辅助，让团队专注判断和成交。",
+    title: "线索运营协同",
+    description: "把询盘、跟进和触达节奏纳入同一张运营视图，减少跨环节损耗。",
   },
   {
-    title: "增长数据复盘",
-    description: "把分散反馈汇总成可执行的数据链，持续优化运营路径。",
+    title: "增长策略复盘",
+    description: "用内容、流量、线索和转化反馈反推下一轮市场与商品动作。",
   },
 ];
 
 export const deliverySteps = [
   {
-    title: "工具能力",
-    description: "以 AI、数据链、自动化辅助和内容生成支撑日常外贸运营。",
+    title: "产品底座",
+    description: "以机会雷达、内容引擎、触达协同和复盘中枢承载核心外贸增长流程。",
   },
   {
-    title: "服务落地",
-    description: "结合客户团队流程配置方案，让工具真正进入业务动作。",
+    title: "业务配置",
+    description: "围绕客户品类、目标市场和团队流程配置增长链路，让产品进入真实运营。",
   },
   {
-    title: "持续优化",
-    description: "基于目标市场反馈和运营数据，持续调整策略与执行节奏。",
+    title: "增长迭代",
+    description: "基于运营反馈持续校准市场判断、内容资产和触达策略，形成复利数据资产。",
   },
 ];
 
 export const contact = {
   email: "contact@sinancloudmap.com",
-  prompt: "请通过邮箱预约沟通，我们会根据你的业务阶段安排交流。",
+  prompt: "通过邮箱预约产品沟通，我们会基于你的品类、市场和运营阶段梳理第一张增长云图。",
 };

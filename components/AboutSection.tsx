@@ -18,11 +18,11 @@ export function AboutSection() {
             About Sinan Cloudmap
           </p>
           <h2 className="mt-3 text-3xl font-semibold leading-tight text-brand-ink">
-            专注外贸 AI 产品与服务的科技公司
+            构建外贸 AI 增长系统的科技公司
           </h2>
           <p className="mt-5 text-base leading-8 text-slate-600">
-            司南云图（杭州）科技有限公司专注外贸 AI
-            产品与服务，帮助外贸团队把分散的市场信号、商品信息、运营动作和增长数据连接成可执行的业务云图。
+            司南云图（杭州）科技有限公司面向外贸团队构建 AI
+            增长系统，将市场机会、商品内容、客户触达和运营反馈连接为一张可导航、可复盘、可持续优化的业务云图。
           </p>
         </div>
       </div>
