@@ -97,6 +97,7 @@ test("product services use the approved SinanPilot product lineup", async () => 
   assert.match(site, /独立站经营场景/);
   assert.match(site, /生成式搜索/);
   assert.match(hero, /AI 时代的贸易增长专家/);
+  assert.match(hero, /lg:whitespace-nowrap/);
   assert.doesNotMatch(hero, /<h1[^>]*>\s*让贸易增长有迹可循\s*<\/h1>/);
   assert.doesNotMatch(hero, /<h1[^>]*>\s*司南云图（杭州）科技有限公司\s*<\/h1>/);
   assert.match(hero, /AI 增长产品矩阵/);

@@ -8,12 +8,12 @@ export function Hero() {
       id="home"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f7fbff_100%)]"
     >
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-16 sm:px-6 lg:grid-cols-[1fr_0.92fr] lg:px-8 lg:pb-24 lg:pt-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-16 sm:px-6 lg:grid-cols-[1.35fr_0.65fr] lg:px-8 lg:pb-24 lg:pt-20">
         <div>
           <p className="text-sm font-semibold uppercase text-brand-blue">
             AI Growth Products for Trade Teams
           </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-brand-ink sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-brand-ink sm:text-5xl lg:whitespace-nowrap lg:text-6xl">
             AI 时代的贸易增长专家
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
