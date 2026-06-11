@@ -5,24 +5,36 @@ import { navItems } from "@/data/site";
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex h-[82px] max-w-7xl items-center justify-between gap-3 px-4 sm:h-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-4 px-4 sm:h-36 sm:px-6 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center" aria-label="司南云图首页">
           <Image
             src="/brand/sinan-cloudmap-logo-horizontal.svg"
             alt="司南云图"
-            width={195}
-            height={65}
+            width={336}
+            height={112}
             priority
-            className="h-12 w-auto sm:h-16"
+            className="h-16 w-auto sm:h-28"
           />
         </Link>
-        <nav className="hidden items-center gap-7 text-sm font-medium text-slate-600 lg:flex">
+        <nav className="hidden items-center gap-12 text-sm font-medium text-slate-600 lg:flex xl:gap-16">
           {navItems.map((item) =>
             item.children ? (
-              <div key={item.label} className="group relative py-8">
-                <button className="flex items-center gap-1 transition hover:text-brand-blue">
+              <div key={item.label} className="group relative py-12">
+                <button className="flex items-center gap-2 transition hover:text-brand-blue">
                   {item.label}
-                  <span className="text-xs text-slate-400">⌄</span>
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4 stroke-current text-slate-400 transition group-hover:rotate-180 group-hover:text-brand-blue"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 9l6 6 6-6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.2"
+                    />
+                  </svg>
                 </button>
                 <div className="invisible absolute left-1/2 top-full w-[340px] -translate-x-1/2 rounded-lg border border-slate-200 bg-white p-3 opacity-0 shadow-xl shadow-slate-200/80 transition group-hover:visible group-hover:opacity-100">
                   <div className="grid gap-1">
