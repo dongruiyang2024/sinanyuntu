@@ -73,6 +73,7 @@ test("header uses wider nav spacing and a custom product chevron", async () => {
 test("product services use the approved SinanPilot product lineup", async () => {
   const site = await readProjectFile("data/site.ts");
   const hero = await readProjectFile("components/Hero.tsx");
+  const heroVideo = await readProjectFile("components/HeroVideo.tsx");
   const capabilityMap = await readProjectFile("components/CapabilityMap.tsx");
   const productsPage = await readProjectFile("app/products/page.tsx");
   const productDetail = await readProjectFile("app/products/[slug]/page.tsx");
@@ -102,6 +103,11 @@ test("product services use the approved SinanPilot product lineup", async () => 
   assert.doesNotMatch(hero, /<h1[^>]*>\s*司南云图（杭州）科技有限公司\s*<\/h1>/);
   assert.match(hero, /AI 增长产品矩阵/);
   assert.match(hero, /\/products"/);
+  assert.match(hero, /<HeroVideo \/>/);
+  assert.doesNotMatch(hero, /trustKeywords/);
+  assert.doesNotMatch(hero, /<CloudMapVisual/);
+  assert.match(heroVideo, /<video/);
+  assert.match(heroVideo, /sinan-cloudmap-video-poster\.svg/);
   assert.doesNotMatch(hero, /SinanPilot 外贸 AI 增长工作台/);
   assert.match(site, /export const capabilities = products\.map/);
   assert.match(capabilityMap, /产品矩阵/);
