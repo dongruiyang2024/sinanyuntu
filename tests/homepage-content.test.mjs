@@ -134,11 +134,12 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
 
   assert.match(site, /footerTagline/);
   assert.match(site, /外贸 AI 增长系统/);
-  assert.match(footer, /w-\[260px\] sm:w-\[340px\]/);
+  assert.match(footer, /h-\[86px\] w-\[205px\] shrink-0 overflow-hidden/);
+  assert.match(footer, /h-\[96px\] w-\[288px\] max-w-none/);
   assert.match(footer, /py-7/);
   assert.match(footer, /lg:grid-cols-\[minmax\(0,1fr\)_500px\]/);
   assert.match(footer, /sm:grid-cols-\[0\.75fr_0\.95fr_1\.35fr\]/);
-  assert.match(footer, /lg:flex-row/);
+  assert.match(footer, /gap-2 sm:flex-row/);
   assert.match(footer, /max-w-\[520px\]/);
   assert.match(footer, /footerTagline/);
   assert.doesNotMatch(
@@ -156,11 +157,14 @@ test("footer includes stronger brand, QR placeholders, and compliance records", 
   assert.match(site, /complianceRecords/);
   assert.match(site, /legalLinks/);
   assert.match(site, /Copyright © 2026/);
-  assert.match(footer, /关注我们/);
+  assert.doesNotMatch(footer, /关注我们/);
   assert.match(footer, /socialChannels\.map/);
   assert.match(footer, /complianceRecords\.map/);
   assert.match(footer, /legalLinks\.map/);
-  assert.match(footer, /h-14 w-14/);
+  assert.match(footer, /mt-2 flex flex-wrap/);
+  assert.match(footer, /grid justify-items-center gap-1/);
+  assert.match(footer, /h-12 w-12/);
+  assert.match(footer, /text-\[11px\]/);
   assert.match(footer, /二维码占位/);
   assert.doesNotMatch(footer, />备案信息</);
   assert.match(footer, /justify-between/);

@@ -16,28 +16,26 @@ export function Footer() {
     <footer className="border-t border-slate-200 bg-[#f8fbff]">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-7 sm:px-6 lg:grid-cols-[minmax(0,1fr)_500px] lg:px-8">
         <div className="min-w-0">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
-            <Image
-              src="/brand/sinan-cloudmap-logo-horizontal.svg"
-              alt="司南云图"
-              width={340}
-              height={113}
-              className="h-auto w-[260px] sm:w-[340px]"
-            />
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+            <div className="h-[86px] w-[205px] shrink-0 overflow-hidden sm:h-[96px] sm:w-[238px]">
+              <Image
+                src="/brand/sinan-cloudmap-logo-horizontal.svg"
+                alt="司南云图"
+                width={340}
+                height={113}
+                className="h-[96px] w-[288px] max-w-none sm:h-[113px] sm:w-[340px]"
+              />
+            </div>
             <p className="max-w-[520px] text-base leading-8 text-slate-600">{footerTagline}</p>
           </div>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            <p className="mr-1 text-xs font-semibold text-brand-blue">关注我们</p>
+          <div className="mt-2 flex flex-wrap gap-5">
             {socialChannels.map((channel) => (
-              <div
-                key={channel.label}
-                className="flex min-w-0 items-center gap-3 rounded-lg border border-slate-200 bg-white/80 px-3 py-2 shadow-sm"
-              >
+              <div key={channel.label} className="grid justify-items-center gap-1">
                 <div
                   aria-label={`${channel.label} 二维码占位`}
-                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-white"
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-white shadow-sm shadow-slate-200/70"
                 >
-                  <div className="grid h-9 w-9 grid-cols-4 gap-0.5">
+                  <div className="grid h-8 w-8 grid-cols-4 gap-0.5">
                     {Array.from({ length: 16 }).map((_, index) => (
                       <span
                         key={`${channel.label}-${index}`}
@@ -50,7 +48,7 @@ export function Footer() {
                     ))}
                   </div>
                 </div>
-                <p className="text-sm font-semibold text-brand-ink">{channel.label}</p>
+                <p className="text-[11px] font-medium leading-4 text-slate-600">{channel.label}</p>
               </div>
             ))}
           </div>
