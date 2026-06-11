@@ -71,6 +71,6 @@ export const deliverySteps = [
 ];
 
 export const contact = {
-  email: "contact@sinancloudmap.com",
+  email: "contact@sinanyuntu.com",
   prompt: "通过邮箱预约产品沟通，我们会基于你的品类、市场和运营阶段梳理第一张增长云图。",
 };

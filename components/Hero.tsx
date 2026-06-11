@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CloudMapVisual } from "@/components/CloudMapVisual";
-import { trustKeywords } from "@/data/site";
+import { contact, trustKeywords } from "@/data/site";
 
 export function Hero() {
   return (
@@ -22,7 +22,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href="mailto:contact@sinancloudmap.com"
+              href={`mailto:${contact.email}`}
               className="inline-flex h-12 items-center justify-center rounded-full bg-brand-blue px-6 text-sm font-semibold text-white shadow-lg shadow-brand-blue/20 transition hover:bg-brand-ink"
             >
               预约沟通

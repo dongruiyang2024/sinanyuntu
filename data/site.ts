@@ -98,7 +98,25 @@ export const solutionLinks = [
   { label: "跨境内容方案", href: "https://www.shopify.com/" },
 ];
 
+export const recruitingRoles = [
+  {
+    title: "AI 运营",
+    description:
+      "把客户业务场景、产品配置和运营反馈连接起来，推动 AI 工具在真实增长流程中持续产生结果。",
+  },
+  {
+    title: "AI 工程师",
+    description:
+      "参与 AI 增长产品的工程化落地，围绕数据链路、智能工作流和产品体验构建稳定能力。",
+  },
+  {
+    title: "AI 销售",
+    description:
+      "面向外贸与跨境企业识别增长需求，建立可信的产品沟通和客户成功协同路径。",
+  },
+];
+
 export const contact = {
-  email: "contact@sinancloudmap.com",
+  email: "contact@sinanyuntu.com",
   prompt: "通过邮箱预约产品沟通，我们会基于你的品类、市场和运营阶段梳理第一张增长云图。",
 };

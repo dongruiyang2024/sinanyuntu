@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { products } from "@/data/site";
+import { contact, products } from "@/data/site";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -79,7 +79,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             ))}
           </div>
           <a
-            href="mailto:contact@sinancloudmap.com"
+            href={`mailto:${contact.email}`}
             className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-brand-blue px-6 text-sm font-semibold text-white shadow-lg shadow-brand-blue/20 transition hover:bg-brand-ink"
           >
             预约产品沟通

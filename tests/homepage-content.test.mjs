@@ -46,8 +46,17 @@ test("header keeps a compact nav height while scaling the logo", async () => {
 
   assert.match(header, /h-\[88px\]/);
   assert.match(header, /sm:h-24/);
-  assert.match(header, /className="h-auto w-\[192px\] sm:w-72"/);
+  assert.match(header, /className="h-auto w-\[224px\] sm:w-96"/);
   assert.doesNotMatch(header, /h-\[104px\]|sm:h-36|sm:h-28/);
+});
+
+test("header contact action uses brand styling instead of a black fill", async () => {
+  const header = await readProjectFile("components/Header.tsx");
+
+  assert.match(header, /border-brand-blue/);
+  assert.match(header, /text-brand-blue/);
+  assert.match(header, /hover:bg-brand-blue/);
+  assert.doesNotMatch(header, /bg-brand-ink/);
 });
 
 test("header uses wider nav spacing and a custom product chevron", async () => {
@@ -70,6 +79,40 @@ test("product, case, and about routes exist", async () => {
   assert.match(productPage, /ProductPage/);
   assert.match(casesPage, /企业案例/);
   assert.match(aboutPage, /关于司南云图/);
+});
+
+test("contact email uses the sinanyuntu.com domain across source contact points", async () => {
+  for (const path of ["data/site.ts", "data/home.ts"]) {
+    const source = await readProjectFile(path);
+
+    assert.match(source, /contact@sinanyuntu\.com/);
+    assert.doesNotMatch(source, /sinancloudmap\.com/);
+  }
+
+  for (const path of [
+    "components/Header.tsx",
+    "components/Hero.tsx",
+    "components/ContactSection.tsx",
+    "app/products/[slug]/page.tsx",
+  ]) {
+    const source = await readProjectFile(path);
+
+    assert.match(source, /contact\.email/);
+    assert.doesNotMatch(source, /sinancloudmap\.com/);
+  }
+});
+
+test("about page includes a recruiting section for AI roles", async () => {
+  const site = await readProjectFile("data/site.ts");
+  const aboutPage = await readProjectFile("app/about/page.tsx");
+
+  for (const role of ["AI 运营", "AI 工程师", "AI 销售"]) {
+    assert.match(site, new RegExp(role));
+  }
+
+  assert.match(site, /recruitingRoles/);
+  assert.match(aboutPage, /recruitingRoles\.map/);
+  assert.match(aboutPage, /加入司南云图/);
 });
 
 test("footer exposes configurable external solution links", async () => {

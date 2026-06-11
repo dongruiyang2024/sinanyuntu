@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { contact, recruitingRoles } from "@/data/site";
 
 export default function AboutPage() {
   return (
@@ -39,6 +40,33 @@ export default function AboutPage() {
               <p className="mt-4 text-sm leading-7 text-slate-600">{description}</p>
             </article>
           ))}
+        </div>
+      </section>
+      <section className="bg-[#f7fbff] px-5 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase text-brand-blue">Careers</p>
+            <h2 className="mt-3 text-3xl font-semibold text-brand-ink md:text-4xl">
+              加入司南云图
+            </h2>
+            <p className="mt-5 text-base leading-8 text-slate-600">
+              我们正在招聘兼具业务理解、AI 产品意识和增长结果导向的伙伴，一起把外贸增长工作流做成可持续迭代的产品系统。
+            </p>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {recruitingRoles.map((role) => (
+              <article key={role.title} className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-semibold text-brand-ink">{role.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600">{role.description}</p>
+              </article>
+            ))}
+          </div>
+          <a
+            href={`mailto:${contact.email}`}
+            className="mt-10 inline-flex h-12 items-center justify-center rounded-full border border-brand-blue/30 bg-white px-6 text-sm font-semibold text-brand-blue shadow-sm shadow-brand-blue/10 transition hover:border-brand-blue hover:bg-brand-blue hover:text-white"
+          >
+            投递简历
+          </a>
         </div>
       </section>
       <Footer />

@@ -85,7 +85,7 @@ test("homepage source includes the approved sections and anchors", async () => {
     assert.match(data, new RegExp(anchor));
   }
 
-  assert.match(data, /contact@sinancloudmap\.com/);
+  assert.match(data, /contact@sinanyuntu\.com/);
   assert.match(data, /AI 工具软件/);
   assert.match(data, /产品与服务落地/);
 });
@@ -536,7 +536,7 @@ export const deliverySteps = [
 ];
 
 export const contact = {
-  email: "contact@sinancloudmap.com",
+  email: "contact@sinanyuntu.com",
   prompt: "请通过邮箱预约沟通，我们会根据你的业务阶段安排交流。",
 };
 ```

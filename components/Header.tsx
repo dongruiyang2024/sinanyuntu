@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navItems } from "@/data/site";
+import { contact, navItems } from "@/data/site";
 
 export function Header() {
   return (
@@ -10,10 +10,10 @@ export function Header() {
           <Image
             src="/brand/sinan-cloudmap-logo-horizontal.svg"
             alt="司南云图"
-            width={288}
-            height={96}
+            width={384}
+            height={128}
             priority
-            className="h-auto w-[192px] sm:w-72"
+            className="h-auto w-[224px] sm:w-96"
           />
         </Link>
         <nav className="hidden items-center gap-12 text-sm font-medium text-slate-600 lg:flex xl:gap-16">
@@ -63,8 +63,8 @@ export function Header() {
           )}
         </nav>
         <a
-          href="mailto:contact@sinancloudmap.com"
-          className="inline-flex h-10 shrink-0 items-center justify-center rounded-full bg-brand-ink px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-blue sm:h-11 sm:px-5"
+          href={`mailto:${contact.email}`}
+          className="inline-flex h-10 shrink-0 items-center justify-center rounded-full border border-brand-blue/30 bg-white px-4 text-sm font-semibold text-brand-blue shadow-sm shadow-brand-blue/10 transition hover:border-brand-blue hover:bg-brand-blue hover:text-white sm:h-11 sm:px-5"
         >
           预约沟通
         </a>

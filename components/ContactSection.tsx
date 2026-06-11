@@ -1,4 +1,4 @@
-import { contact } from "@/data/home";
+import { contact } from "@/data/site";
 
 export function ContactSection() {
   return (
