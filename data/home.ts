@@ -15,24 +15,24 @@ export const trustKeywords = [
 
 export const capabilities = [
   {
-    title: "买家信号捕捉",
-    description: "汇总买家意图、采购线索和市场变化，帮助外贸团队更早发现值得跟进的客户信号。",
-    marker: "Signal",
+    title: "SinanPilot",
+    description: "为外贸团队提供从买家信号、智能判断到销售执行的一体化 AI 增长能力。",
+    marker: "AI Pilot",
   },
   {
-    title: "商机智能判断",
-    description: "用 AI 辅助识别客户优先级、需求匹配度和跟进价值，让销售判断更稳定。",
-    marker: "Judge",
+    title: "内贸客户增长软件",
+    description: "面向国内贸易团队集中管理客户信号、销售判断、跟进节奏和成交反馈。",
+    marker: "Domestic",
   },
   {
-    title: "销售执行协同",
-    description: "围绕客户触达、沟通内容和下一步动作形成执行节奏，减少线索在团队间流失。",
-    marker: "Action",
+    title: "独立站增长软件",
+    description: "连接站点内容、访客行为、询盘线索和转化反馈，优化独立站增长路径。",
+    marker: "DTC",
   },
   {
-    title: "增长复盘优化",
-    description: "沉淀线索、触达和转化反馈，持续校准买家判断、销售动作和客户增长策略。",
-    marker: "Loop",
+    title: "GEO 增长服务",
+    description: "围绕生成式搜索和 AI 答案场景，优化品牌知识、内容结构和引用路径。",
+    marker: "GEO",
   },
 ];
 

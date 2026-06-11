@@ -3,10 +3,10 @@ type CloudMapVisualProps = {
 };
 
 const nodes = [
-  { label: "买家信号", position: "left-[12%] top-[56%]", dot: "bg-brand-blue" },
-  { label: "智能判断", position: "left-[43%] top-[18%]", dot: "bg-brand-gold" },
-  { label: "销售执行", position: "right-[13%] top-[58%]", dot: "bg-brand-cyan" },
-  { label: "增长复盘", position: "left-[36%] bottom-[13%]", dot: "bg-brand-harbor" },
+  { label: "外贸增长", position: "left-[12%] top-[56%]", dot: "bg-brand-blue" },
+  { label: "内贸客户", position: "left-[43%] top-[18%]", dot: "bg-brand-gold" },
+  { label: "独立站", position: "right-[13%] top-[58%]", dot: "bg-brand-cyan" },
+  { label: "GEO", position: "left-[36%] bottom-[13%]", dot: "bg-brand-harbor" },
 ];
 
 export function CloudMapVisual({ compact = false }: CloudMapVisualProps) {
@@ -67,9 +67,9 @@ export function CloudMapVisual({ compact = false }: CloudMapVisualProps) {
         </div>
       ))}
       <div className="absolute bottom-6 left-6 right-6 rounded-lg border border-white/70 bg-white/80 p-4 shadow-sm backdrop-blur">
-        <p className="text-sm font-semibold text-brand-ink">Signal · Judge · Action · Loop</p>
+        <p className="text-sm font-semibold text-brand-ink">Product Matrix · AI Growth</p>
         <p className="mt-1 text-sm leading-6 text-slate-600">
-          从买家信号到销售执行，把外贸客户增长沉淀为连续进化的数据链路。
+          以多个软件产品和服务模块覆盖不同贸易增长场景。
         </p>
       </div>
     </div>

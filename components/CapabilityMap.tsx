@@ -8,17 +8,17 @@ export function CapabilityMap() {
     <section id="capabilities" className="bg-white px-5 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="SinanPilot Capability Map"
-          title="围绕 SinanPilot 的四项核心增长能力"
-          description="从买家信号、智能判断到销售执行，司南云图把外贸客户增长拆成可配置、可追踪、可复盘的产品能力。"
+          eyebrow="Product Matrix"
+          title="产品矩阵，覆盖多类贸易增长场景"
+          description="SinanPilot 是司南云图的外贸 AI 产品之一；同时我们也提供内贸客户增长、独立站增长和 GEO 软件服务，形成面向不同客户群体的产品组合。"
         />
         <div className="mt-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <CloudMapVisual compact />
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [scrollbar-width:thin]">
             {capabilities.map((item) => (
               <article
                 key={item.title}
-                className="rounded-lg border border-slate-200 bg-slate-50/80 p-5"
+                className="min-w-[260px] snap-start rounded-lg border border-slate-200 bg-slate-50/80 p-5 sm:min-w-[300px]"
               >
                 <p className="text-xs font-semibold uppercase text-brand-cyan">
                   {item.marker}

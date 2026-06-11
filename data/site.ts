@@ -62,32 +62,12 @@ export const navItems = [
 
 export const trustKeywords = products.map((product) => product.title);
 
-export const capabilities = [
-  {
-    title: "买家信号捕捉",
-    description: "汇总买家意图、采购线索和市场变化，帮助外贸团队更早发现值得跟进的客户信号。",
-    marker: "Signal",
-    href: "/products/sinanpilot",
-  },
-  {
-    title: "商机智能判断",
-    description: "用 AI 辅助识别客户优先级、需求匹配度和跟进价值，让销售判断更稳定。",
-    marker: "Judge",
-    href: "/products/sinanpilot",
-  },
-  {
-    title: "销售执行协同",
-    description: "围绕客户触达、沟通内容和下一步动作形成执行节奏，减少线索在团队间流失。",
-    marker: "Action",
-    href: "/products/sinanpilot",
-  },
-  {
-    title: "增长复盘优化",
-    description: "沉淀线索、触达和转化反馈，持续校准买家判断、销售动作和客户增长策略。",
-    marker: "Loop",
-    href: "/products/sinanpilot",
-  },
-];
+export const capabilities = products.map((product) => ({
+  title: product.title,
+  description: product.summary,
+  marker: product.marker,
+  href: product.href,
+}));
 
 export const customerCases = [
   {
