@@ -91,7 +91,8 @@ test("product services use the approved SinanPilot product lineup", async () => 
     assert.doesNotMatch(site, new RegExp(oldProduct));
   }
 
-  assert.match(site, /trade\.xiezi\.tech/);
+  assert.match(site, /pilot\.sinan\.yun/);
+  assert.doesNotMatch(site, /trade\.xiezi\.tech/);
   assert.match(site, /买家信号、智能判断到销售执行/);
   assert.match(site, /买家信号到销售执行的 AI 增长工作台/);
   assert.match(site, /国内贸易团队/);

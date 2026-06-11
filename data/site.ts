@@ -10,7 +10,7 @@ export const products = [
       "SinanPilot 为外贸团队提供从买家信号、智能判断到销售执行的一体化 AI 增长能力，帮助团队把市场机会、客户优先级和跟进动作沉淀为可复盘的增长流程。",
     capabilities: ["买家信号捕捉", "商机智能判断", "客户优先级排序", "销售动作协同"],
     scenarios: ["外贸客户开发", "销售线索判断", "团队跟进提效"],
-    officialUrl: "https://trade.xiezi.tech/",
+    officialUrl: "https://pilot.sinan.yun",
   },
   {
     slug: "domestic-trade-growth",
