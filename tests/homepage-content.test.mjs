@@ -41,12 +41,13 @@ test("site source includes the approved pages and navigation model", async () =>
   }
 });
 
-test("header presents the logo as a first-viewport brand signal", async () => {
+test("header keeps a compact nav height while scaling the logo", async () => {
   const header = await readProjectFile("components/Header.tsx");
 
-  assert.match(header, /h-\[104px\]/);
-  assert.match(header, /sm:h-36/);
-  assert.match(header, /className="h-16 w-auto sm:h-28"/);
+  assert.match(header, /h-\[88px\]/);
+  assert.match(header, /sm:h-24/);
+  assert.match(header, /className="h-auto w-\[192px\] sm:w-72"/);
+  assert.doesNotMatch(header, /h-\[104px\]|sm:h-36|sm:h-28/);
 });
 
 test("header uses wider nav spacing and a custom product chevron", async () => {
@@ -54,6 +55,7 @@ test("header uses wider nav spacing and a custom product chevron", async () => {
 
   assert.match(header, /gap-12/);
   assert.match(header, /xl:gap-16/);
+  assert.match(header, /group relative py-8/);
   assert.match(header, /<svg/);
   assert.match(header, /M6 9l6 6 6-6/);
   assert.doesNotMatch(header, /⌄/);

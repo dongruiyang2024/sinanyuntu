@@ -5,21 +5,21 @@ import { navItems } from "@/data/site";
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex h-[104px] max-w-7xl items-center justify-between gap-4 px-4 sm:h-36 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[88px] max-w-7xl items-center justify-between gap-4 px-4 sm:h-24 sm:px-6 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center" aria-label="司南云图首页">
           <Image
             src="/brand/sinan-cloudmap-logo-horizontal.svg"
             alt="司南云图"
-            width={336}
-            height={112}
+            width={288}
+            height={96}
             priority
-            className="h-16 w-auto sm:h-28"
+            className="h-auto w-[192px] sm:w-72"
           />
         </Link>
         <nav className="hidden items-center gap-12 text-sm font-medium text-slate-600 lg:flex xl:gap-16">
           {navItems.map((item) =>
             item.children ? (
-              <div key={item.label} className="group relative py-12">
+              <div key={item.label} className="group relative py-8">
                 <button className="flex items-center gap-2 transition hover:text-brand-blue">
                   {item.label}
                   <svg
