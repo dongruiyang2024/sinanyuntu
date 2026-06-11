@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { CloudMapVisual } from "@/components/CloudMapVisual";
 import { SectionHeading } from "@/components/SectionHeading";
-import { capabilities } from "@/data/home";
+import { capabilities } from "@/data/site";
 
 export function CapabilityMap() {
   return (
@@ -24,6 +25,12 @@ export function CapabilityMap() {
                 </p>
                 <h3 className="mt-3 text-xl font-semibold text-brand-ink">{item.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
+                <Link
+                  href={item.href}
+                  className="mt-5 inline-flex text-sm font-semibold text-brand-blue hover:text-brand-ink"
+                >
+                  查看产品详情
+                </Link>
               </article>
             ))}
           </div>

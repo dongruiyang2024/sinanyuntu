@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { CloudMapVisual } from "@/components/CloudMapVisual";
-import { trustKeywords } from "@/data/home";
+import { trustKeywords } from "@/data/site";
 
 export function Hero() {
   return (
@@ -21,17 +22,17 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#contact"
+              href="mailto:contact@sinancloudmap.com"
               className="inline-flex h-12 items-center justify-center rounded-full bg-brand-blue px-6 text-sm font-semibold text-white shadow-lg shadow-brand-blue/20 transition hover:bg-brand-ink"
             >
               预约沟通
             </a>
-            <a
-              href="#capabilities"
+            <Link
+              href="/products/opportunity-radar"
               className="inline-flex h-12 items-center justify-center rounded-full border border-slate-300 bg-white px-6 text-sm font-semibold text-brand-harbor transition hover:border-brand-blue hover:text-brand-blue"
             >
-              进入能力图谱
-            </a>
+              查看产品服务
+            </Link>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {trustKeywords.map((item) => (

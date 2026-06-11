@@ -12,29 +12,33 @@ async function readProjectFile(path) {
   return readFile(fileUrl(path), "utf8");
 }
 
-test("homepage source includes the approved sections and anchors", async () => {
+test("site source includes the approved pages and navigation model", async () => {
   const page = await readProjectFile("app/page.tsx");
-  const data = await readProjectFile("data/home.ts");
+  const site = await readProjectFile("data/site.ts");
 
   for (const section of [
     "Hero",
     "CapabilityMap",
-    "ServiceScenarios",
-    "DeliveryModel",
-    "AboutSection",
-    "ContactSection",
+    "CustomerCases",
+    "Footer",
   ]) {
     assert.match(page, new RegExp(section));
   }
 
-  for (const anchor of ["#home", "#capabilities", "#scenarios", "#about", "#contact"]) {
-    assert.match(data, new RegExp(anchor));
+  for (const navLabel of ["首页", "产品服务", "企业案例", "关于我们"]) {
+    assert.match(site, new RegExp(navLabel));
   }
 
-  assert.match(data, /contact@sinancloudmap\.com/);
-  assert.match(data, /机会雷达/);
-  assert.match(data, /商品内容引擎/);
-  assert.match(data, /增长复盘中枢/);
+  for (const route of [
+    "/products/opportunity-radar",
+    "/products/content-engine",
+    "/products/customer-touch",
+    "/products/growth-loop",
+    "/cases",
+    "/about",
+  ]) {
+    assert.match(site, new RegExp(route));
+  }
 });
 
 test("header presents the logo as a first-viewport brand signal", async () => {
@@ -43,6 +47,30 @@ test("header presents the logo as a first-viewport brand signal", async () => {
   assert.match(header, /h-\[82px\]/);
   assert.match(header, /sm:h-24/);
   assert.match(header, /className="h-12 w-auto sm:h-16"/);
+});
+
+test("product, case, and about routes exist", async () => {
+  const productPage = await readProjectFile("app/products/[slug]/page.tsx");
+  const casesPage = await readProjectFile("app/cases/page.tsx");
+  const aboutPage = await readProjectFile("app/about/page.tsx");
+
+  assert.match(productPage, /generateStaticParams/);
+  assert.match(productPage, /ProductPage/);
+  assert.match(casesPage, /企业案例/);
+  assert.match(aboutPage, /关于司南云图/);
+});
+
+test("footer exposes configurable external solution links", async () => {
+  const site = await readProjectFile("data/site.ts");
+  const footer = await readProjectFile("components/Footer.tsx");
+
+  for (const solution of ["软件增长方案", "制造出海方案", "跨境内容方案"]) {
+    assert.match(site, new RegExp(solution));
+  }
+
+  assert.match(site, /solutionLinks/);
+  assert.match(footer, /target="_blank"/);
+  assert.match(footer, /rel="noreferrer"/);
 });
 
 test("brand assets are available to the Next.js public directory", async () => {

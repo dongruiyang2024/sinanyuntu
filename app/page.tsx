@@ -1,11 +1,8 @@
-import { AboutSection } from "@/components/AboutSection";
 import { CapabilityMap } from "@/components/CapabilityMap";
-import { ContactSection } from "@/components/ContactSection";
-import { DeliveryModel } from "@/components/DeliveryModel";
+import { CustomerCases } from "@/components/CustomerCases";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { ServiceScenarios } from "@/components/ServiceScenarios";
 
 export default function Home() {
   return (
@@ -13,10 +10,7 @@ export default function Home() {
       <Header />
       <Hero />
       <CapabilityMap />
-      <ServiceScenarios />
-      <DeliveryModel />
-      <AboutSection />
-      <ContactSection />
+      <CustomerCases />
       <Footer />
     </main>
   );
