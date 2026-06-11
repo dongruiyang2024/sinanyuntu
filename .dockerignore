@@ -1,0 +1,11 @@
+.git
+.next
+.superpowers
+node_modules
+npm-debug.log*
+.env*.local
+.DS_Store
+**/.DS_Store
+._*
+**/._*
+README*.md

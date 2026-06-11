@@ -243,3 +243,24 @@ test("brand assets are available to the Next.js public directory", async () => {
   const logo = await readProjectFile("public/brand/sinan-cloudmap-logo-horizontal.svg");
   assert.match(logo, /司南云图横版 Logo/);
 });
+
+test("docker and nginx deployment files run the standalone server behind reverse proxy", async () => {
+  const nextConfig = await readProjectFile("next.config.ts");
+  const dockerfile = await readProjectFile("Dockerfile");
+  const compose = await readProjectFile("docker-compose.yml");
+  const dockerignore = await readProjectFile(".dockerignore");
+  const nginxConfig = await readProjectFile("deploy/nginx/sinan.yun.conf");
+
+  assert.match(nextConfig, /output:\s*"standalone"/);
+  assert.match(dockerfile, /npm ci/);
+  assert.match(dockerfile, /npm run build/);
+  assert.match(dockerfile, /COPY --from=builder \/app\/\.next\/standalone/);
+  assert.match(dockerfile, /CMD \["node", "server\.js"\]/);
+  assert.match(compose, /sinanyuntu-web/);
+  assert.match(compose, /"127\.0\.0\.1:3000:3000"/);
+  assert.match(compose, /restart: unless-stopped/);
+  assert.match(dockerignore, /\*\*\/\._\*/);
+  assert.match(nginxConfig, /server_name sinan\.yun/);
+  assert.match(nginxConfig, /proxy_pass http:\/\/127\.0\.0\.1:3000/);
+  assert.match(nginxConfig, /X-Forwarded-Proto/);
+});
