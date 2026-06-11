@@ -261,6 +261,8 @@ test("docker and nginx deployment files run the standalone server behind reverse
   assert.match(compose, /restart: unless-stopped/);
   assert.match(dockerignore, /\*\*\/\._\*/);
   assert.match(nginxConfig, /server_name sinan\.yun/);
+  assert.match(nginxConfig, /listen 443 ssl/);
+  assert.match(nginxConfig, /ssl_certificate \/etc\/letsencrypt\/live\/sinan\.yun\/fullchain\.pem/);
   assert.match(nginxConfig, /proxy_pass http:\/\/127\.0\.0\.1:3000/);
   assert.match(nginxConfig, /X-Forwarded-Proto/);
 });
